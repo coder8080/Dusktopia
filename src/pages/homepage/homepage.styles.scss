@@ -1,0 +1,61 @@
+.homepage {
+  .section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../../assets/hero.png');
+    background-position: center;
+    background-size: cover;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      .section-title {
+        letter-spacing: 1rem;
+        text-align: center;
+      }
+
+      .button-container {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+      }
+    }
+
+    .ellipse-1 {
+      background-color: rgba(241, 163, 71, 1);
+      filter: blur(150px);
+      width: 50vw;
+      height: 30vw;
+      position: absolute;
+      left: -25%;
+      bottom: -25%;
+      border-radius: 50%;
+      opacity: 0.7;
+
+      @supports not (filter: blur()) {
+        background-color: red;
+      }
+    }
+
+    .ellipse-2 {
+      background-color: rgba(255, 114, 190, 0.5);
+      filter: blur(150px);
+      width: 50vw;
+      height: 30vw;
+      position: absolute;
+      right: -25%;
+      bottom: -25%;
+      border-radius: 50%;
+    }
+  }
+}

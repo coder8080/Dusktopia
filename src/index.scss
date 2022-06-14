@@ -1,0 +1,119 @@
+@font-face {
+  font-family: TTOctosquares;
+  src: url('./fonts/TTOctosquares/TTOctosquares-Regular.otf') format('opentype'),
+    url('./fonts/TTOctosquares/TTOctosquares-Regular.ttf') format('truetype');
+
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: TTOctosquares;
+  src: url('./fonts/TTOctosquares/TTOctosquares-Medium.otf') format('opentype'),
+    url('./fonts/TTOctosquares/TTOctosquares-Medium.ttf') format('truetype');
+
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: TTOctosquares;
+  src: url('./fonts/TTOctosquares/TTOctosquares-Bold.otf') format('opentype'),
+    url('./fonts/TTOctosquares/TTOctosquares-Bold.ttf') format('truetype');
+
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: NueueMachina;
+  src: url('./fonts/NeueMachina/NeueMachina-Medium.eot')
+      format('embedded-opentype'),
+    url('./fonts/NeueMachina/NeueMachina-Medium.ttf') format('truetype'),
+    url('./fonts/NeueMachina/NeueMachina-Medium.woff') format('woff'),
+    url('./fonts/NeueMachina/NeueMachina-Medium.woff2') format('woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: NueueMachina;
+  src: url('./fonts/NeueMachina/NeueMachina-Bold.eot')
+      format('embedded-opentype'),
+    url('./fonts//NeueMachina/NeueMachina-Bold.ttf') format('truetype'),
+    url('./fonts/NeueMachina/NeueMachina-Medium.woff') format('woff'),
+    url('./fonts/NeueMachina/NeueMachina-Medium.woff2') format('woff2');
+  font-weight: 700;
+}
+
+:root {
+  --display-font-size: 4.74rem; // 80
+  --display-line-height: 5.925rem; // 94.8
+  --h0-font-size: 4.125rem; // 66
+  --h0-line-height: 4.888125rem; //78.21
+  --h1-font-size: 4rem; // 64
+  --h1-line-height: 4.74rem; // 75.84
+  --h2-font-size: 2.5625rem; // 41
+  --h2-line-height: 3.5875rem; // 57.4
+  --h2-scaled-font-size: 2.8125rem; // 45
+  --h2-scaled-line-height: 3.9375rem; // 63
+  --normal-font-size: 0.8125rem; // 13
+  --normal-line-height: 1.1375rem; // 18.2
+  --normal-scaled-font-size: 0.9375rem; // 15
+  --normal-scaled-line-height: 1.3125rem; // 21
+  --button-font-size: 1rem; // 16
+  --button-line-height: 1.4rem; // 22.4
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+
+  --body-font: TTOctosquares;
+
+  --text-color: black;
+  --white-color: white;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+}
+
+.display {
+  font-size: var(--display-font-size);
+  line-height: var(--display-line-height);
+}
+
+.h0 {
+  font-size: var(--h0-font-size);
+  line-height: var(--h0-line-height);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h1,
+.h1 {
+  font-size: var(--h1-font-size);
+  line-height: var(--h1-line-height);
+}
+
+h2,
+.h2 {
+  font-size: var(--h2-font-size);
+  line-height: var(--h2-line-height);
+}
+
+.light {
+  color: var(--white-color);
+}
