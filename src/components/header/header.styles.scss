@@ -1,0 +1,45 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--z-fixed);
+
+  .nav {
+    height: var(--header-height);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+
+    .menu {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      grid-template-areas: 'items social button';
+      column-gap: 2rem;
+
+      .nav-items {
+        grid-area: items;
+        display: none;
+      }
+
+      .social {
+        grid-area: social;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+
+        .social-img {
+          width: 25px;
+          height: auto;
+        }
+      }
+
+      .button-container {
+        grid-area: button;
+      }
+    }
+  }
+}

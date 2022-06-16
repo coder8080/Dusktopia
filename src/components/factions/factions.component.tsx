@@ -13,7 +13,7 @@ const Factions: FC<FactionProps> = ({ baseActiveFaction }) => {
     setActiveFaction(id || baseActiveFaction)
   }
   useLayoutEffect(() => {
-    setTimeout(() => setActiveFaction(baseActiveFaction), 0)
+    setTimeout(() => setActiveFaction(baseActiveFaction), 100)
   }, [])
   return (
     <div className="factions-container">
