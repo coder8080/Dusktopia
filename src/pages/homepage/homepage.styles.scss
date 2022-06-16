@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url('../../assets/hero.png');
+    background-image: url('../../assets/backgrounds/hero.png');
     background-position: center;
     background-size: cover;
 
@@ -41,6 +41,7 @@
       bottom: -25%;
       border-radius: 50%;
       opacity: 0.7;
+      z-index: 0;
 
       @supports not (filter: blur()) {
         background-color: red;
@@ -56,6 +57,62 @@
       right: -25%;
       bottom: -25%;
       border-radius: 50%;
+      z-index: 0;
+    }
+  }
+
+  .factions {
+    min-height: 100vh;
+    background-image: url('../../assets/backgrounds/planet.png');
+    background-position: center;
+    background-size: cover;
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      min-height: inherit;
+      z-index: 2;
+
+      * {
+        z-index: 2;
+      }
+
+      .title-container {
+        flex: 1;
+        text-align: center;
+
+        .section-title {
+          letter-spacing: 1rem;
+        }
+      }
+    }
+
+    .ellipse {
+      z-index: 0;
+    }
+
+    .ellipse-1 {
+      position: absolute;
+      width: 50vw;
+      height: 35vw;
+      left: 15%;
+      top: 25%;
+      transform: rotate(-30deg);
+      background: #ff72be;
+      filter: blur(20vw);
+    }
+
+    .ellipse-2 {
+      position: absolute;
+      width: 30vw;
+      height: 25vw;
+      left: 50%;
+      top: 25%;
+      background: rgba(255, 214, 0, 0.5);
+      filter: blur(15vw);
     }
   }
 }

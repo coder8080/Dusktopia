@@ -56,6 +56,8 @@
   --h2-line-height: 3.5875rem; // 57.4
   --h2-scaled-font-size: 2.8125rem; // 45
   --h2-scaled-line-height: 3.9375rem; // 63
+  --h3-font-size: 1.375rem; // 22
+  --h3-line-height: 1.925rem; // 30.8
   --normal-font-size: 0.8125rem; // 13
   --normal-line-height: 1.1375rem; // 18.2
   --normal-scaled-font-size: 0.9375rem; // 15
@@ -93,12 +95,14 @@ body {
 .display {
   font-size: var(--display-font-size);
   line-height: var(--display-line-height);
+  font-weight: var(--weight-regular);
+  text-transform: uppercase;
 }
 
 .h0 {
   font-size: var(--h0-font-size);
   line-height: var(--h0-line-height);
-  font-weight: 400;
+  font-weight: var(--weight-regular);
   text-transform: uppercase;
 }
 
@@ -112,6 +116,12 @@ h2,
 .h2 {
   font-size: var(--h2-font-size);
   line-height: var(--h2-line-height);
+}
+
+h3,
+.h3 {
+  font-size: var(--h3-font-size);
+  line-height: var(--h3-line-height);
 }
 
 .light {

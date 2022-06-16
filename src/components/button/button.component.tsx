@@ -3,7 +3,7 @@ import './button.styles.scss'
 
 interface ButtonProps {
   children: ReactNode
-  type: 'white' | 'transparent'
+  type: 'white' | 'transparent' | 'badlands-gradient'
 }
 
 const Button: FC<ButtonProps> = ({ children, type }) => (

@@ -1,0 +1,59 @@
+.faction-preview {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas: 'title gem' 'image none';
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 1rem;
+
+  .title-container {
+    grid-area: title;
+
+    .faction-title {
+      white-space: nowrap;
+      text-transform: uppercase;
+      font-weight: var(--weight-medium);
+    }
+  }
+
+  .gem-container {
+    grid-area: gem;
+    width: 80px;
+    height: 80px;
+
+    svg {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .image-container {
+    grid-area: image;
+    position: relative;
+    overflow-y: clip;
+    transition: 0.3s;
+    margin-left: auto;
+
+    img {
+      width: 20vw;
+      display: block;
+      border: 3px solid rgb(100, 100, 100);
+    }
+
+    .corner {
+      position: absolute;
+      background-color: white;
+      width: 20px;
+      height: 20px;
+      bottom: 8px;
+      left: 8px;
+      clip-path: polygon(0% 0%, 100% 100%, 0% 100%, 0% 0%);
+    }
+
+    .btn {
+      position: absolute;
+      top: calc(50% - 31.2px);
+      margin-left: -25%;
+    }
+  }
+}

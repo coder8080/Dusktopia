@@ -12,6 +12,28 @@
     --background: var(--white-color);
     --color: black;
   }
+  &.badlands-gradient,
+  &.frontier-gradient,
+  &.groove-gradient,
+  &.citadel-gradient {
+    --color: black;
+  }
+
+  &.badlands-gradient {
+    --background: linear-gradient(45deg, #ffb800, #ffbac3);
+  }
+
+  &.frontier-gradient {
+    --background: linear-gradient(45deg, #60b3ff, #6bb3bd);
+  }
+
+  &.groove-gradient {
+    --background: linear-gradient(45deg, #68e3d5, #b24ac2);
+  }
+
+  &.citadel-gradient {
+    --background: linear-gradient(45deg, #8ff2f8, #ffd84e);
+  }
 
   clip-path: polygon(
     0 var(--crop-height),
@@ -23,7 +45,7 @@
     calc(var(--crop-width)) calc(100% - var(--crop-height)),
     0 calc(100% - var(--crop-height))
   );
-  background-color: var(--background);
+  background: var(--background);
   min-width: 140px;
   padding: 20px 30px;
   position: relative;

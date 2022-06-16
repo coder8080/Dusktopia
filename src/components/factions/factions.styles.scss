@@ -1,0 +1,14 @@
+.factions-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 7.5px;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    right: 32.5px;
+  }
+}
