@@ -9,7 +9,6 @@ const Factions: FC = () => {
   const dispatch = useDispatch()
   useLayoutEffect(() => {
     const timeoutId = setTimeout(() => {
-      console.log('dispatching')
       dispatch(resetDefaultPreview())
     }, 500)
     return () => clearTimeout(timeoutId)
