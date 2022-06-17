@@ -1,6 +1,6 @@
 import Badlands from '../../assets/faction-previews/badlands.png'
 import Frontier from '../../assets/faction-previews/frontier.png'
-import Groove from '../../assets/faction-previews/groove.png'
+import Grove from '../../assets/faction-previews/grove.png'
 import Citadel from '../../assets/faction-previews/citadel.png'
 
 interface Faction {
@@ -11,14 +11,14 @@ interface Faction {
   buttonType:
     | 'badlands-gradient'
     | 'frontier-gradient'
-    | 'groove-gradient'
+    | 'grove-gradient'
     | 'citadel-gradient'
 }
 
 interface FactionsDataInterface {
   badlands: Faction
   frontier: Faction
-  groove: Faction
+  grove: Faction
   citadel: Faction
 }
 
@@ -37,12 +37,12 @@ const FACTIONS_DATA: FactionsDataInterface = {
     line: 'right',
     buttonType: 'frontier-gradient',
   },
-  groove: {
+  grove: {
     id: 'grove',
     title: 'Sundered Grove',
-    imageUrl: Groove,
+    imageUrl: Grove,
     line: 'left',
-    buttonType: 'groove-gradient',
+    buttonType: 'grove-gradient',
   },
   citadel: {
     id: 'citadel',

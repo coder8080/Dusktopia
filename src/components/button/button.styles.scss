@@ -14,7 +14,7 @@
   }
   &.badlands-gradient,
   &.frontier-gradient,
-  &.groove-gradient,
+  &.grove-gradient,
   &.citadel-gradient {
     --color: black;
   }
@@ -27,7 +27,7 @@
     --background: linear-gradient(45deg, #60b3ff, #6bb3bd);
   }
 
-  &.groove-gradient {
+  &.grove-gradient {
     --background: linear-gradient(45deg, #68e3d5, #b24ac2);
   }
 

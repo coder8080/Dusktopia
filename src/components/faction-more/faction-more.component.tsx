@@ -1,7 +1,7 @@
 import { FC, useLayoutEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { selectActivePopup } from '../../redux/factions/selectors'
-import { closePopup } from '../../redux/factions/actions'
+import { closePopup, nextPopup } from '../../redux/factions/actions'
 import Button from '../button/button.component'
 import Gem from '../gem/gem.component'
 import SideMenu from '../side-menu/side-menu.component'
@@ -30,8 +30,8 @@ const FactionMore: FC<FactionMoreProps> = ({
   const dispatch = useDispatch()
   const isActive = activeId === id
   useLayoutEffect(() => {
-    document.body.style.overflow = isActive ? 'hidden' : 'auto'
-  }, [isActive])
+    document.body.style.overflow = activeId !== null ? 'hidden' : 'auto'
+  }, [activeId])
   return (
     <div
       className={`faction-more${isActive ? ' active' : ''}`}
@@ -46,7 +46,9 @@ const FactionMore: FC<FactionMoreProps> = ({
           <Button type="transparent" onClick={() => dispatch(closePopup())}>
             Close
           </Button>
-          <Button type="white">Next</Button>
+          <Button type="white" onClick={() => dispatch(nextPopup())}>
+            Next
+          </Button>
         </div>
         <div className="title-container">
           <img src={titleImgUrl} alt={title} />

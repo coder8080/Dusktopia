@@ -17,3 +17,7 @@ export const setActivePopup = (id: string) => ({
 export const closePopup = () => ({
   type: FactionsActionTypes.ClosePopup,
 })
+
+export const nextPopup = () => ({
+  type: FactionsActionTypes.NextPopup,
+})
