@@ -8,12 +8,15 @@ import './header.styles.scss'
 
 const Header: FC = () => {
   const [blurred, setBlurred] = useState(0)
+  const [backgroundOpacity, setBackgroundOpacity] = useState(0)
   const onScroll = useCallback(() => {
     const scrollPosition = window.scrollY
     if (scrollPosition > 100) {
-      setBlurred(20)
+      setBlurred(46)
+      setBackgroundOpacity(0.2)
     } else {
-      setBlurred(Math.floor((scrollPosition / 100) * 20))
+      setBlurred(Math.floor((scrollPosition / 100) * 46))
+      setBackgroundOpacity((scrollPosition / 100) * 0.2)
     }
   }, [setBlurred])
   useLayoutEffect(() => {
@@ -22,7 +25,13 @@ const Header: FC = () => {
   }, [onScroll])
   return (
     <header className="header">
-      <nav className="nav" style={{ backdropFilter: `blur(${blurred}px)` }}>
+      <nav
+        className="nav"
+        style={{
+          backdropFilter: `blur(${blurred}px)`,
+          background: `rgba(255, 255, 255, ${backgroundOpacity})`,
+        }}
+      >
         <div className="logo-container">
           <Logo />
         </div>

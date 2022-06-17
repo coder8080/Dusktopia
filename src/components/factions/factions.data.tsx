@@ -4,7 +4,7 @@ import Groove from '../../assets/faction-previews/groove.png'
 import Citadel from '../../assets/faction-previews/citadel.png'
 
 interface Faction {
-  id: number
+  id: string
   title: string
   imageUrl: string
   line: 'left' | 'right'
@@ -24,28 +24,28 @@ interface FactionsDataInterface {
 
 const FACTIONS_DATA: FactionsDataInterface = {
   badlands: {
-    id: 1,
+    id: 'badlands',
     title: 'Blighted Badlands',
     imageUrl: Badlands,
     line: 'left',
     buttonType: 'badlands-gradient',
   },
   frontier: {
-    id: 2,
+    id: 'frontier',
     title: 'Glacial Frontier',
     imageUrl: Frontier,
     line: 'right',
     buttonType: 'frontier-gradient',
   },
   groove: {
-    id: 3,
+    id: 'grove',
     title: 'Sundered Grove',
     imageUrl: Groove,
     line: 'left',
     buttonType: 'groove-gradient',
   },
   citadel: {
-    id: 4,
+    id: 'citadel',
     title: 'Sky Citadel',
     imageUrl: Citadel,
     line: 'right',

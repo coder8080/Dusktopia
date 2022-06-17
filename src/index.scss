@@ -76,8 +76,11 @@
   --white-color: white;
 
   --header-height: 90px;
+  --menu-height: 60px;
 
-  --z-fixed: 100;
+  --z-header: 200;
+  --z-faction-more: 300;
+  --z-menu: 100;
 }
 
 * {

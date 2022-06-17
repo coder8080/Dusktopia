@@ -6,12 +6,13 @@
   gap: var(--gap);
   transform: rotate(90deg);
   width: 100vh;
-  height: 60px;
+  height: var(--menu-height);
   background-color: transparent;
   transform-origin: 0 100%;
   position: absolute;
-  top: -60px;
+  top: calc(var(--menu-height) * -1);
   left: 0;
+  z-index: var(--z-menu);
 
   .menu-link {
     display: none;

@@ -3,18 +3,14 @@ import './gem.styles.scss'
 
 interface GemProps {
   isActive: boolean
-  line: 'left' | 'right'
-  number: number
+  line: 'left' | 'right' | 'none'
+  id: string
 }
 
-const Gem: FC<GemProps> = ({ number, isActive, line }) => (
-  <svg
-    viewBox="0 0 130 150"
-    style={{ width: '100px', height: '100px' }}
-    className="gem"
-  >
+const Gem: FC<GemProps> = ({ id, isActive, line }) => (
+  <svg viewBox="0 0 130 150" className="gem">
     <linearGradient
-      id={`background-${number}`}
+      id={`background-${id}`}
       gradientTransform="rotate(-45,0.5,0.5)"
     >
       <stop offset="0%" stopColor={isActive ? 'rgb(44, 216, 213)' : 'white'} />
@@ -33,7 +29,7 @@ const Gem: FC<GemProps> = ({ number, isActive, line }) => (
     />
     <polygon
       points="48 63.3, 72.5 40, 97 63.3, 97 86.6, 72.5 110, 48 86.6, 48 63.3"
-      fill={`url(#background-${number})`}
+      fill={`url(#background-${id})`}
       style={{
         filter: isActive
           ? `drop-shadow(0 5px 6px #D6C0EF)`
@@ -44,7 +40,9 @@ const Gem: FC<GemProps> = ({ number, isActive, line }) => (
       d={
         line === 'left'
           ? 'M 65 0 L 19.5 43.3, 19.5 86.6, 65 130'
-          : 'M 65 0 L 110.5 43.3, 110.5 86.6, 65 130'
+          : line === 'right'
+          ? 'M 65 0 L 110.5 43.3, 110.5 86.6, 65 130'
+          : ''
       }
       fill="transparent"
       stroke="white"

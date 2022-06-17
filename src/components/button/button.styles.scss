@@ -45,6 +45,7 @@
     calc(var(--crop-width)) calc(100% - var(--crop-height)),
     0 calc(100% - var(--crop-height))
   );
+
   background: var(--background);
   min-width: 140px;
   padding: 20px 30px;
@@ -54,6 +55,7 @@
   font-family: var(--button-font);
   font-weight: 600;
   color: var(--color);
+  cursor: pointer;
 
   &:not(.white)::after {
     content: '';
