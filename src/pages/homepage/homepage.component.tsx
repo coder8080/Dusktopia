@@ -1,12 +1,13 @@
 import { FC } from 'react'
 import Button from '../../components/button/button.component'
 import Factions from '../../components/factions/factions.component'
+import SideMenu from '../../components/side-menu/side-menu.component'
 import './homepage.styles.scss'
 
 const Homepage: FC = () => {
   return (
     <div className="homepage">
-      <section className="section home">
+      <section className="section home" id="home">
         <div className="content">
           <p className="h0 light section-title">From dusk to dawn</p>
           <div className="button-container">
@@ -16,8 +17,9 @@ const Homepage: FC = () => {
         </div>
         <div className="ellipse-1" />
         <div className="ellipse-2" />
+        <SideMenu currentSection="home" />
       </section>
-      <section className="factions section">
+      <section className="factions section" id="factions">
         <div className="ellipse ellipse-1" />
         <div className="ellipse ellipse-2" />
         <div className="content">
@@ -26,6 +28,7 @@ const Homepage: FC = () => {
           </div>
           <Factions baseActiveFaction={1} />
         </div>
+        <SideMenu currentSection="factions" />
       </section>
     </div>
   )

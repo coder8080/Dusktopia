@@ -1,0 +1,42 @@
+.side-menu {
+  --gap: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: var(--gap);
+  transform: rotate(90deg);
+  width: 100vh;
+  height: 60px;
+  background-color: transparent;
+  transform-origin: 0 100%;
+  position: absolute;
+  top: -60px;
+  left: 0;
+
+  .menu-link {
+    display: none;
+    text-transform: capitalize;
+    font-size: var(--button-font-size);
+    font-family: var(--button-font);
+    line-height: var(--button-line-height);
+    font-weight: var(--weight-medium);
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+
+    &.active {
+      color: var(--white-color);
+      font-weight: var(--weight-bold);
+    }
+
+    &.display {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: var(--gap);
+    }
+  }
+
+  .menu-link.display + .menu-link.display::before {
+    content: url('../../assets/menu-divider.svg');
+  }
+}
