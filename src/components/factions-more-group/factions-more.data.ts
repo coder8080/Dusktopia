@@ -50,6 +50,8 @@ interface FactionData {
   description: string[]
   objects: string[]
   darkObjects: string[]
+  color1: string
+  color2: string
 }
 
 interface FactionsMoreData {
@@ -77,6 +79,8 @@ const FACTIONS_MORE_DATA: FactionsMoreData = {
       BadlandsNormal4,
     ],
     darkObjects: [BadlandsDark1, BadlandsDark2, BadlandsDark3, BadlandsDark4],
+    color1: '#F1A347',
+    color2: '#FF72E0',
   },
   frontier: {
     titleImgUrl: FrontierTitle,
@@ -95,6 +99,8 @@ const FACTIONS_MORE_DATA: FactionsMoreData = {
       FrontierNormal4,
     ],
     darkObjects: [FrontierDark1, FrontierDark2, FrontierDark3, FrontierDark4],
+    color1: '#6BB4C0',
+    color2: '#61B4FA',
   },
   grove: {
     titleImgUrl: GroveTitle,
@@ -109,6 +115,8 @@ const FACTIONS_MORE_DATA: FactionsMoreData = {
     ],
     objects: [GroveNormal1, GroveNormal2, GroveNormal3, GroveNormal4],
     darkObjects: [GroveDark1, GroveDark2, GroveDark3, GroveDark4],
+    color1: '#B24AC2',
+    color2: '#68E3D5',
   },
   citadel: {
     titleImgUrl: CitadelTitle,
@@ -122,6 +130,8 @@ const FACTIONS_MORE_DATA: FactionsMoreData = {
     ],
     objects: [CitadelNormal1, CitadelNormal2, CitadelNormal3, CitadelNormal4],
     darkObjects: [CitadelDark1, CitadelDark2, CitadelDark3, CitadelDark4],
+    color1: '#E4DF77',
+    color2: '#68E3D5',
   },
 }
 

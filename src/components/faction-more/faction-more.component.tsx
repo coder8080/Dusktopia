@@ -15,6 +15,8 @@ interface FactionMoreProps {
   description: string[]
   objects: string[]
   darkObjects: string[]
+  color1: string
+  color2: string
 }
 
 const FactionMore: FC<FactionMoreProps> = ({
@@ -25,6 +27,8 @@ const FactionMore: FC<FactionMoreProps> = ({
   description,
   objects,
   darkObjects,
+  color1,
+  color2,
 }) => {
   const activeId = useSelector(selectActivePopup)
   const dispatch = useDispatch()
@@ -76,6 +80,14 @@ const FactionMore: FC<FactionMoreProps> = ({
       <div className="gem-container">
         <Gem isActive={true} id={`${id}-more`} line="none" />
       </div>
+      <div
+        className="faction-more-ellipse faction-more-ellipse-1"
+        style={{ backgroundColor: color1 }}
+      />
+      <div
+        className="faction-more-ellipse faction-more-ellipse-2"
+        style={{ backgroundColor: color2 }}
+      />
     </div>
   )
 }

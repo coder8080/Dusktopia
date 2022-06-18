@@ -24,6 +24,7 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+    z-index: 2;
 
     .buttons-container {
       display: flex;
@@ -133,5 +134,24 @@
       margin-left: 7.5px;
       margin-top: -30px;
     }
+  }
+
+  .faction-more-ellipse {
+    width: 50%;
+    position: absolute;
+    border-radius: 50%;
+    bottom: -20vh;
+    height: 60vh;
+    opacity: 0.65;
+    filter: blur(250px);
+    z-index: 1;
+  }
+
+  .faction-more-ellipse-1 {
+    left: 0;
+  }
+
+  .faction-more-ellipse-2 {
+    right: 0;
   }
 }
