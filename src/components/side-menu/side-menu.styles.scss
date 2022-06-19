@@ -40,4 +40,8 @@
   .menu-link.display + .menu-link.display::before {
     content: url('../../assets/menu-divider.svg');
   }
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 }
