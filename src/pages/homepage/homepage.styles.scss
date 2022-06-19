@@ -12,6 +12,8 @@
     background-image: url('../../assets/backgrounds/hero.png');
     background-position: center;
     background-size: cover;
+    padding-left: calc(var(--menu-height) + 1rem);
+    padding-right: calc(var(--menu-height) + 1rem);
 
     .content {
       display: flex;
@@ -86,6 +88,15 @@
 
         .section-title {
           letter-spacing: 1rem;
+        }
+      }
+
+      @media screen and (max-width: 870px) {
+        justify-content: flex-end;
+        gap: 1rem;
+
+        .title-container {
+          flex: initial;
         }
       }
     }

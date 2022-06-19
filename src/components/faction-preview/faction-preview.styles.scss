@@ -55,5 +55,18 @@
       top: calc(50% - 31.2px);
       margin-left: -25%;
     }
+
+    @media screen and (max-width: 870px) {
+      .corner {
+        width: 15px;
+        height: 15px;
+        left: 5px;
+        bottom: 5px;
+      }
+
+      .btn {
+        margin-left: -40%;
+      }
+    }
   }
 }

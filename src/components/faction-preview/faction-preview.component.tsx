@@ -1,11 +1,7 @@
 import { FC, MutableRefObject, useRef } from 'react'
 import Button from '../button/button.component'
 import { selectActivePreview } from '../../redux/factions/selectors'
-import {
-  setActivePreview,
-  resetDefaultPreview,
-  setActivePopup,
-} from '../../redux/factions/actions'
+import { setActivePreview, setActivePopup } from '../../redux/factions/actions'
 import { useSelector, useDispatch } from 'react-redux'
 import Gem from '../gem/gem.component'
 import './faction-preview.styles.scss'
@@ -33,7 +29,6 @@ const FactionPreview: FC<FactionPreviewProps> = ({
     <div
       className="faction-preview"
       onMouseEnter={() => dispatch(setActivePreview(id))}
-      onMouseLeave={() => dispatch(resetDefaultPreview())}
     >
       <div className="title-container">
         <h3 className="faction-title light">{title}</h3>

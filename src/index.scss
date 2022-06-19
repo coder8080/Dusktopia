@@ -49,7 +49,7 @@
   --display-font-size: 4.74rem; // 80
   --display-line-height: 5.925rem; // 94.8
   --h0-font-size: 4.125rem; // 66
-  --h0-line-height: 4.888125rem; //78.21
+  --h0-line-height: 4.888125rem; // 78.21
   --h1-font-size: 4rem; // 64
   --h1-line-height: 4.74rem; // 75.84
   --h2-font-size: 2.5625rem; // 41
@@ -81,6 +81,27 @@
   --z-header: 200;
   --z-faction-more: 300;
   --z-menu: 100;
+
+  @media screen and (max-width: 1050px) {
+    --display-font-size: 2.5rem; // 40
+    --display-line-height: 2.5rem; // 40
+    --h0-font-size: 3.125rem; // 50
+    --h0-line-height: 3.125rem; // 50
+    --h1-font-size: 2.5rem; // 40
+    --h1-line-height: 2.5rem; // 40
+    --h2-font-size: 2.625rem; // 42
+    --h2-line-height: 3.675rem; // 57.4
+    --h2-scaled-font-size: 2.8125rem; // 45
+    --h2-scaled-line-height: 3.9375rem; // 63
+    --h3-font-size: 1.3125rem; // 21
+    --h3-line-height: 1.8375rem; // 29.4
+    --normal-font-size: 0.8125rem; // 13
+    --normal-line-height: 1.1375rem; // 18.2
+    --normal-scaled-font-size: 0.875rem; // 14
+    --normal-scaled-line-height: 1.225rem; // 19.6
+    --button-font-size: 1rem; // 16
+    --button-line-height: 1.4rem; // 22.4
+  }
 }
 
 * {
