@@ -5,6 +5,7 @@ import { closePopup, nextPopup } from '../../redux/factions/actions'
 import Button from '../button/button.component'
 import Gem from '../gem/gem.component'
 import SideMenu from '../side-menu/side-menu.component'
+import RightArrow from '../../assets/right-arrow.svg'
 import './faction-more.styles.scss'
 
 interface FactionMoreProps {
@@ -52,6 +53,7 @@ const FactionMore: FC<FactionMoreProps> = ({
           </Button>
           <Button type="white" onClick={() => dispatch(nextPopup())}>
             Next
+            <img src={RightArrow} className="btn-icon" alt="right-arrow" />
           </Button>
         </div>
         <div className="title-container">

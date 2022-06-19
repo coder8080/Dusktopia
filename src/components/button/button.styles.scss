@@ -56,6 +56,10 @@
   font-weight: 600;
   color: var(--color);
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 
   &:not(.white)::after {
     content: '';
@@ -108,5 +112,12 @@
     height: 15px;
     background-color: var(--color);
     clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  }
+
+  .btn-icon {
+    width: 1em;
+    height: 1em;
+    margin-left: 0.5em;
+    margin-top: -0.25em;
   }
 }
