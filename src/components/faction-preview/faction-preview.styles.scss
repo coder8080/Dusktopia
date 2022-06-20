@@ -69,4 +69,43 @@
       }
     }
   }
+
+  @media screen and (max-width: 800px) {
+    .gem-container {
+      width: 50px;
+      height: 50px;
+    }
+
+    .image-container {
+      height: auto;
+      img {
+        width: 70vw;
+      }
+
+      .btn {
+        top: calc(100% - 65px);
+        left: 25px;
+        margin-left: 0;
+      }
+
+      .spacer {
+        content: '';
+        display: block;
+        height: 30px;
+        width: 1px;
+      }
+
+      .corner {
+        bottom: 35px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .title-container .faction-title {
+      white-space: initial;
+      text-align: right;
+      padding-left: 1rem;
+    }
+  }
 }

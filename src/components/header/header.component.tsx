@@ -26,6 +26,8 @@ const Header: FC = () => {
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [onScroll])
+  const openMenu = () => setIsMenuOpened(true)
+  const closeMenu = () => setIsMenuOpened(false)
   return (
     <header className="header">
       <nav className="nav">
@@ -39,10 +41,7 @@ const Header: FC = () => {
         <div className="logo-container">
           <Logo />
         </div>
-        <div
-          className="open-menu-container"
-          onClick={() => setIsMenuOpened(true)}
-        >
+        <div className="open-menu-container" onClick={openMenu}>
           <img src={Menu} alt="open menu" />
         </div>
         <div className={`menu${isMenuOpened ? ' active' : ''}`}>
@@ -52,17 +51,17 @@ const Header: FC = () => {
               src={Cross}
               alt="close"
               className="close-img"
-              onClick={() => setIsMenuOpened(false)}
+              onClick={closeMenu}
             />
           </div>
           <ul className="nav-items">
             <li className="nav-item">
-              <a href="#home" className="nav-link">
+              <a href="#home" className="nav-link" onClick={closeMenu}>
                 home
               </a>
             </li>
             <li className="nav-item">
-              <a href="#factions" className="nav-link">
+              <a href="#factions" className="nav-link" onClick={closeMenu}>
                 factions
               </a>
             </li>

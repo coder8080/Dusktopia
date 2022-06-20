@@ -10,6 +10,8 @@ import BadlandsDark3 from '../../assets/faction-objects/badlands/dark/3.png'
 import BadlandsDark4 from '../../assets/faction-objects/badlands/dark/4.png'
 
 import FrontierTitle from '../../assets/faction-titles/frontier.svg'
+import FrontierTitle1 from '../../assets/faction-titles/frontier-1.svg'
+import FrontierTitle2 from '../../assets/faction-titles/frontier-2.svg'
 import FrontierBackground from '../../assets/faction-backgrounds/frontier.png'
 import FrontierNormal1 from '../../assets/faction-objects/frontier/normal/1.png'
 import FrontierNormal2 from '../../assets/faction-objects/frontier/normal/2.png'
@@ -21,6 +23,8 @@ import FrontierDark3 from '../../assets/faction-objects/frontier/dark/3.png'
 import FrontierDark4 from '../../assets/faction-objects/frontier/dark/4.png'
 
 import GroveTitle from '../../assets/faction-titles/grove.svg'
+import GroveTitle1 from '../../assets/faction-titles/grove-1.svg'
+import GroveTitle2 from '../../assets/faction-titles/grove-2.svg'
 import GroveBackground from '../../assets/faction-backgrounds/grove.png'
 import GroveNormal1 from '../../assets/faction-objects/grove/normal/1.png'
 import GroveNormal2 from '../../assets/faction-objects/grove/normal/2.png'
@@ -32,6 +36,8 @@ import GroveDark3 from '../../assets/faction-objects/grove/dark/3.png'
 import GroveDark4 from '../../assets/faction-objects/grove/dark/4.png'
 
 import CitadelTitle from '../../assets/faction-titles/citadel.svg'
+import CitadelTitle1 from '../../assets/faction-titles/citadel-1.svg'
+import CitadelTitle2 from '../../assets/faction-titles/citadel-2.svg'
 import CitadelBackground from '../../assets/faction-backgrounds/citadel.png'
 import CitadelNormal1 from '../../assets/faction-objects/citadel/normal/1.png'
 import CitadelNormal2 from '../../assets/faction-objects/citadel/normal/2.png'
@@ -45,6 +51,7 @@ import CitadelDark4 from '../../assets/faction-objects/citadel/dark/4.png'
 interface FactionData {
   id: string
   titleImgUrl: string
+  mobileTitleImgUrl: string[]
   title: string
   backgroundImgUrl: string
   description: string[]
@@ -64,6 +71,7 @@ interface FactionsMoreData {
 const FACTIONS_MORE_DATA: FactionsMoreData = {
   badlands: {
     titleImgUrl: BadlandsTitle,
+    mobileTitleImgUrl: [BadlandsTitle],
     id: 'badlands',
     title: 'Badlands',
     backgroundImgUrl: BadlandsBackground,
@@ -84,6 +92,7 @@ const FACTIONS_MORE_DATA: FactionsMoreData = {
   },
   frontier: {
     titleImgUrl: FrontierTitle,
+    mobileTitleImgUrl: [FrontierTitle1, FrontierTitle2],
     id: 'frontier',
     title: 'Frontier',
     backgroundImgUrl: FrontierBackground,
@@ -104,6 +113,7 @@ const FACTIONS_MORE_DATA: FactionsMoreData = {
   },
   grove: {
     titleImgUrl: GroveTitle,
+    mobileTitleImgUrl: [GroveTitle1, GroveTitle2],
     id: 'grove',
     title: 'Grove',
     backgroundImgUrl: GroveBackground,
@@ -120,6 +130,7 @@ const FACTIONS_MORE_DATA: FactionsMoreData = {
   },
   citadel: {
     titleImgUrl: CitadelTitle,
+    mobileTitleImgUrl: [CitadelTitle1, CitadelTitle2],
     id: 'citadel',
     title: 'Citadel',
     backgroundImgUrl: CitadelBackground,

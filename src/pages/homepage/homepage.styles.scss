@@ -44,10 +44,6 @@
       border-radius: 50%;
       opacity: 0.7;
       z-index: 0;
-
-      @supports not (filter: blur()) {
-        background-color: red;
-      }
     }
 
     .ellipse-2 {
@@ -124,6 +120,62 @@
       top: 25%;
       background: rgba(255, 214, 0, 0.5);
       filter: blur(15vw);
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .home {
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      .content {
+        gap: 4rem;
+
+        .section-title {
+          letter-spacing: 0.7rem;
+        }
+
+        .button-container {
+          flex-direction: column-reverse;
+          align-items: center;
+        }
+      }
+
+      .ellipse {
+        display: none;
+      }
+    }
+
+    .factions .section-content {
+      flex-direction: column;
+      justify-content: center;
+      gap: 4rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+
+      .title-container {
+        flex: initial;
+
+        .section-title {
+          letter-spacing: 0.7rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .factions .section-content {
+      gap: 4rem;
+
+      .title-container .section-title {
+        letter-spacing: 0.5rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .factions .section-content {
+      gap: 1.5rem;
     }
   }
 }

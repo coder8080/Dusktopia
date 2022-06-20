@@ -1,6 +1,7 @@
 .factions-container {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   position: relative;
 
   &::after {
@@ -10,5 +11,17 @@
     position: absolute;
     background-color: white;
     right: 32.5px;
+  }
+
+  @media screen and (max-width: 800px) {
+    gap: 3rem;
+    &::after {
+      width: 4px;
+      right: 21px;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    gap: 2rem;
   }
 }

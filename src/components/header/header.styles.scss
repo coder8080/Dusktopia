@@ -171,4 +171,15 @@
       }
     }
   }
+
+  @media screen and (max-width: 350px) {
+    .nav {
+      padding: 0 0.5rem;
+
+      .menu {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+    }
+  }
 }

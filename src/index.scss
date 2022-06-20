@@ -104,6 +104,13 @@
 
     --header-height: 60px;
   }
+
+  @media screen and (max-width: 350px) {
+    --display-font-size: 1.6rem; // 25.6
+    --display-line-heigth: 1.6rem; // 25.6
+    --h0-font-size: 2.8rem; // 44,8
+    --h0-line-height: 2.8rem; // 44,8
+  }
 }
 
 * {

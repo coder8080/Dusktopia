@@ -50,6 +50,7 @@ const FactionPreview: FC<FactionPreviewProps> = ({
           More
         </Button>
         <div className="corner" />
+        <div className="spacer"></div>
       </div>
     </div>
   )

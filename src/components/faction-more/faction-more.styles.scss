@@ -31,15 +31,26 @@
       flex-direction: row;
       justify-content: space-between;
       margin-bottom: 2rem;
+
+      .close-mobile,
+      .next-mobile {
+        display: none;
+      }
     }
 
     .title-container {
       height: 80px;
       margin-bottom: 2rem;
+      display: flex;
+      flex-direction: row;
 
-      img {
+      .desktop-title {
         height: 100%;
         max-height: 100%;
+      }
+
+      .mobile-title {
+        display: none;
       }
     }
 
@@ -154,5 +165,100 @@
 
   .faction-more-ellipse-2 {
     right: 0;
+  }
+
+  @media screen and (max-width: 800px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    .content {
+      max-width: 100%;
+      max-height: 100vh;
+      overflow: hidden;
+      position: relative;
+
+      .buttons-container {
+        .btn {
+          display: none;
+        }
+
+        .close-mobile,
+        .next-mobile {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            max-width: 100%;
+            width: 100%;
+            max-height: 100%;
+            height: 100%;
+          }
+        }
+
+        .next-mobile {
+          width: 30px;
+          height: 40px;
+          margin-right: 10px;
+        }
+
+        .close-mobile {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      .title-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+
+        .desktop-title {
+          display: none;
+        }
+        .mobile-title {
+          display: initial;
+          max-width: 100%;
+        }
+      }
+
+      .scroll-container {
+        overflow: scroll;
+      }
+
+      .description-container {
+        max-width: 100%;
+      }
+
+      .objects-container {
+        flex-direction: column;
+
+        .group {
+          align-items: center;
+
+          .object-card {
+            width: calc(100vw - 4rem);
+            height: calc(100vw - 4rem);
+          }
+        }
+      }
+    }
+
+    .gem-container {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media screen and (max-width: 800px) {
+    .faction-more-ellipse {
+      display: none;
+    }
   }
 }

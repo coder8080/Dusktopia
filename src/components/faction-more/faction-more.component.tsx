@@ -6,11 +6,14 @@ import Button from '../button/button.component'
 import Gem from '../gem/gem.component'
 import SideMenu from '../side-menu/side-menu.component'
 import RightArrow from '../../assets/right-arrow.svg'
+import RightArrowLight from '../../assets/right-arrow-light.svg'
+import Cross from '../../assets/cross.svg'
 import './faction-more.styles.scss'
 
 interface FactionMoreProps {
   id: string
   titleImgUrl: string
+  mobileTitleImgUrl: string[]
   title: string
   backgroundImgUrl: string
   description: string[]
@@ -23,6 +26,7 @@ interface FactionMoreProps {
 const FactionMore: FC<FactionMoreProps> = ({
   id,
   titleImgUrl,
+  mobileTitleImgUrl,
   title,
   backgroundImgUrl,
   description,
@@ -55,28 +59,39 @@ const FactionMore: FC<FactionMoreProps> = ({
             Next
             <img src={RightArrow} className="btn-icon" alt="right-arrow" />
           </Button>
+          <div className="close-mobile" onClick={() => dispatch(closePopup())}>
+            <img src={Cross} alt="close" />
+          </div>
+          <div className="next-mobile" onClick={() => dispatch(nextPopup())}>
+            <img src={RightArrowLight} alt="next" />
+          </div>
         </div>
         <div className="title-container">
-          <img src={titleImgUrl} alt={title} />
-        </div>
-        <div className="description-container">
-          {description.map((text, i) => (
-            <p key={i} className="description light">
-              {text}
-            </p>
+          <img src={titleImgUrl} alt={title} className="desktop-title" />
+          {mobileTitleImgUrl.map((url, i) => (
+            <img className="mobile-title" src={url} alt={title} key={i} />
           ))}
         </div>
-        <div className="objects-container">
-          {objects.map((imageUrl, i) => (
-            <div className="group" key={i}>
-              <div className="object-card">
-                <img src={imageUrl} alt="nft" />
+        <div className="scroll-container">
+          <div className="description-container">
+            {description.map((text, i) => (
+              <p key={i} className="description light">
+                {text}
+              </p>
+            ))}
+          </div>
+          <div className="objects-container">
+            {objects.map((imageUrl, i) => (
+              <div className="group" key={i}>
+                <div className="object-card">
+                  <img src={imageUrl} alt="nft" />
+                </div>
+                <div className="object-card">
+                  <img src={darkObjects[i]} alt="nft" />
+                </div>
               </div>
-              <div className="object-card">
-                <img src={darkObjects[i]} alt="nft" />
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
       <div className="gem-container">
