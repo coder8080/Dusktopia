@@ -63,6 +63,7 @@
 
       .description {
         text-transform: uppercase;
+        font-family: MoveX;
         font-weight: 700;
         font-size: var(--normal-scaled-font-size);
         line-height: var(--normal-scaled-line-height);
@@ -225,7 +226,7 @@
       }
 
       .scroll-container {
-        overflow: scroll;
+        overflow: auto;
       }
 
       .description-container {

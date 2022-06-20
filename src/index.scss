@@ -45,6 +45,12 @@
   font-weight: 700;
 }
 
+@font-face {
+  font-family: MoveX;
+  src: url('./fonts/MoveX/move-x.bold.otf') format('opentype');
+  font-weight: 700;
+}
+
 :root {
   --display-font-size: 4.74rem; // 80
   --display-line-height: 5.925rem; // 94.8
