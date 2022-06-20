@@ -155,9 +155,11 @@
     border-radius: 50%;
     bottom: -20vh;
     height: 60vh;
-    opacity: 0.65;
     filter: blur(250px);
     z-index: 1;
+
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 
   .faction-more-ellipse-1 {
@@ -242,6 +244,8 @@
           .object-card {
             width: calc(100vw - 4rem);
             height: calc(100vw - 4rem);
+            backface-visibility: hidden;
+            transform: translateZ(0);
           }
         }
       }
