@@ -51,6 +51,12 @@
   font-weight: 700;
 }
 
+@font-face {
+  font-family: Mazzard;
+  src: url('./fonts/Mazzard/MazzardH-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+
 :root {
   --display-font-size: 4.74rem; // 80
   --display-line-height: 5.925rem; // 94.8

@@ -1,0 +1,30 @@
+.subtitle {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .text {
+    font-family: Mazzard;
+    font-size: var(--normal-scaled-font-size);
+    line-height: var(--normal-scaled-line-height);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-right: 10px;
+    margin-bottom: -5px;
+    background: linear-gradient(to right, #ffb800, #ffbac3);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .underline {
+    height: 12px;
+  }
+
+  &.type-1 .underline {
+    content: url('../../assets/underline-1.svg');
+  }
+
+  &.type-2 .underline {
+    content: url('../../assets/underline-2.svg');
+  }
+}
